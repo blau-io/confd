@@ -1,0 +1,40 @@
+{
+    "acKind": "ImageManifest",
+    "acVersion": "0.7.1",
+    "name": "confd",
+    "labels": [
+        {"name": "os", "value": "linux"},
+        {"name": "arch", "value": "amd64"}
+    ],
+    "app": {
+        "exec": ["/usr/bin/confd"],
+        "user": "0",
+        "group": "0",
+        "mountPoints": [
+            {
+                "name": "config",
+                "path": "/etc/confd",
+                "readOnly": true
+            },
+            {
+                "name": "output",
+                "path": "/mount",
+                "readOnly": false
+            }
+        ]
+    },
+    "annotations": [
+        {
+            "name": "authors",
+            "value": "Pierre Beaucamp <pierre@blau.io>"
+        },
+        {
+            "name": "documentation",
+            "value": "https://github.com/blau-io/confd"
+        },
+        {
+            "name": "homepage",
+            "value": "https://github.com/kelseyhightower/confd"
+        }
+    ]
+}
